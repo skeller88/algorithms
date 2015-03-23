@@ -65,4 +65,18 @@ def dijkstras(graph, source):
 
     return visited
 
-print dijkstras(graph, 's')
+def get_shortest_path(shortest_path_tree, destination):
+    path = [destination]
+    current = destination
+    previous = shortest_path_tree[destination]['previous']
+
+    while previous:
+        current = previous
+        path.append(current)
+        previous = shortest_path_tree[current].get('previous')
+
+    path.reverse()
+    return path
+
+tree = dijkstras(graph, 's')
+print get_shortest_path(tree, 'd')
