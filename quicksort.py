@@ -26,5 +26,7 @@ def quicksort(arr):
     _quicksort(arr, 0, len(arr) - 1)
 
 a = [1,7,-1,99,8,4]
+b = [4,2]
 quicksort(a)
-print a
+quicksort(b)
+print a, b
