@@ -39,4 +39,4 @@ def sort_count(arr):
 
     return split, count
 
-print sort_count([1,2])
+print sort_count([1, 2])

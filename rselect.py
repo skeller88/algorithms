@@ -1,3 +1,6 @@
+import random
+
+
 def r_select(arr, k):
     """
     Returns:
@@ -7,7 +10,7 @@ def r_select(arr, k):
         arr[a], arr[b] = arr[b], arr[a]
 
     def partition(start, end):
-        pivot = (start + end) >> 1
+        pivot = random.randint(start, end)
         pivot_el = arr[pivot]
         lo = start
 
